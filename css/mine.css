@@ -1,0 +1,199 @@
+body {
+
+
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(67, 0, 155);
+  padding-top: 110px;
+  /* под высоту navbar */
+  background-image: url(/images/list1.svg);
+  background-attachment: fixed;
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-position: -100px, 200px;
+
+}
+
+header {}
+
+
+
+/* ---- Service ---- */
+
+.korpcard {
+  display: flex;
+  /* Включает flex-контейнер */
+  flex-direction: column;
+  /* Устанавливает вертикальную ориентацию */
+  justify-content: flex-end;
+  /* Прижимает содержимое к низу */
+  height: 200px;
+  margin-top: 5px;
+  padding: 0;
+
+
+}
+
+
+.korpcard a {
+  text-decoration: none;
+}
+
+
+
+.vizitcard {
+  display: flex;
+  /* Включает flex-контейнер */
+  flex-direction: column;
+  /* Устанавливает вертикальную ориентацию */
+  justify-content: flex-end;
+  /* Прижимает содержимое к низу */
+  height: 200px;
+  margin-top: 5px;
+  padding: 0;
+}
+
+.landcard {
+  display: flex;
+  /* Включает flex-контейнер */
+  flex-direction: column;
+  /* Устанавливает вертикальную ориентацию */
+  justify-content: flex-end;
+  /* Прижимает содержимое к низу */
+  height: 200px;
+  margin-top: 5px;
+  padding: 0;
+}
+
+.zakazcard {
+  height: 200px;
+}
+
+.magazincard {
+  display: flex;
+  /* Включает flex-контейнер */
+  flex-direction: column;
+  /* Устанавливает вертикальную ориентацию */
+  justify-content: flex-end;
+  /* Прижимает содержимое к низу */
+  height: 200px;
+}
+
+.supportcard {
+  height: 200px;
+}
+
+.seocard {
+  height: 200px;
+}
+
+.contextcard {
+  height: 200px;
+}
+
+.agardcard {
+  height: 200px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* прозрачная рамка */
+  background: transparent;
+  transition: 0.3s ease;
+
+
+}
+
+.agardcard a:hover {
+
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+
+
+/* ---- Content ---- */
+
+.content {
+  padding-top: 20px;
+
+}
+
+footer {
+  background-color: #3b3b3b;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2px 0px;
+
+
+}
+
+
+
+footer li {
+  list-style: none;
+}
+
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+/* ----  Анимация  ----*/
+
+
+.hover-zoom {
+  transition: transform 0.4s ease;
+  /* Плавность анимации */
+}
+
+.hover-zoom:hover {
+  transform: scale(1.03);
+  /* Увеличение блока на 5% */
+}
+
+.hoverlight {
+  transition: box-shadow 0.3s ease, border-color 0.4s ease;
+}
+
+.hoverlight:hover {
+  box-shadow:
+    0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 25px rgba(255, 255, 255, 0.5);
+}
+
+
+.navbar-glass {
+
+  background: rgba(30, 30, 30, 0.45);
+  /* затемнение */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.navbar {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /* можно -5px если нужно ниже */
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  transform: scaleX(1);
+}
